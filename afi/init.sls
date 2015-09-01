@@ -14,6 +14,7 @@ afi__file_/etc/auto.master.d:
   file.recurse:
     - name: {{afi.aficonfdir}}
     - clean: True
+    - include_empty: True
     - user: apache
     - group: apache
     - dir_mode: 0775
