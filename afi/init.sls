@@ -15,6 +15,7 @@ afi__file_{{afi.aficonfdir}}:
     - name: {{afi.aficonfdir}}
     - clean: True
     - include_empty: True
+    - force_symlinks: True
     - user: apache
     - group: apache
     - dir_mode: 0775
