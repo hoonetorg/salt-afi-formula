@@ -1,0 +1,20 @@
+{% set afi = salt['grains.filter_by']({
+  'Debian': {
+    'afipackages': [ 'afi', ],
+    'afiservice': 'apache2',
+    'afiservicemanage': True,
+    'aficonfdir': '/etc/afi',
+  },
+  'RedHat': {
+    'afipackages': [ 'afi', ],
+    'afiservice': 'httpd',
+    'afiservicemanage': True,
+    'aficonfdir': '/etc/afi',
+  },
+  'default': {
+    'afipackages': [ 'afi', ],
+    'afiservice': 'httpd',
+    'afiservicemanage': True,
+    'aficonfdir': '/etc/afi',
+  },
+}, merge=salt['pillar.get']('afi:lookup')) %}
