@@ -9,6 +9,6 @@ afi_ipxe__pkg_ipxeroms:
 afi_ipxe__file_{{afi.afiipxesymlink}}:
   file.symlink:
     - name: {{afi.afiipxesymlink}}
-    - target: {{afiipxesymlinktarget}}
+    - target: {{afi.afiipxesymlinktarget}}
     - require:
       - pkg: ipxeroms
