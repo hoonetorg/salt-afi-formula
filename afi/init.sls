@@ -10,7 +10,7 @@ afi__pkg_afi:
       - service: afi__service_httpd
 {% endif %}
 
-afi__file_/etc/auto.master.d:
+afi__file_{{afi.aficonfdir}}:
   file.recurse:
     - name: {{afi.aficonfdir}}
     - clean: True
