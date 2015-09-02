@@ -6,9 +6,9 @@ afi_ipxe__pkg_ipxeroms:
     - name: ipxeroms
     - pkgs: {{afi.afipackagesipxeroms}}
 
-afi_ipxe__file_{{afi.afiipxesymlink}}:
-  file.symlink:
-    - name: {{afi.afiipxesymlink}}
-    - target: {{afi.afiipxesymlinktarget}}
+afi_ipxe__file_{{afi.afiipxeromtgt}}:
+  file.copy:
+    - name: {{afi.afiipxeromtgt}}
+    - source: {{afi.afiipxeromsrc}}
     - require:
       - pkg: ipxeroms

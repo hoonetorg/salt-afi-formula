@@ -5,8 +5,8 @@
     'afiservicemanage': True,
     'aficonfdir': '/etc/afi',
     'afipackagesipxeroms': [ 'ipxe-bootimgs', ],
-    'afiipxesymlink': '/var/lib/tftpboot/undionly.kpxe',
-    'afiipxesymlinktarget': '/usr/share/ipxe/undionly.kpxe',
+    'afiipxeromtgt': '/var/lib/tftpboot/undionly.kpxe',
+    'afiipxeromsrc': '/usr/share/ipxe/undionly.kpxe',
   },
   'RedHat': {
     'afipackages': [ 'afi', ],
@@ -14,8 +14,8 @@
     'afiservicemanage': True,
     'aficonfdir': '/etc/afi',
     'afipackagesipxeroms': [ 'ipxe-bootimgs', ],
-    'afiipxesymlink': '/var/lib/tftpboot/undionly.kpxe',
-    'afiipxesymlinktarget': '/usr/share/ipxe/undionly.kpxe',
+    'afiipxeromtgt': '/var/lib/tftpboot/undionly.kpxe',
+    'afiipxeromsrc': '/usr/share/ipxe/undionly.kpxe',
   },
   'default': {
     'afipackages': [ 'afi', ],
@@ -23,7 +23,7 @@
     'afiservicemanage': True,
     'aficonfdir': '/etc/afi',
     'afipackagesipxeroms': [ 'ipxe-bootimgs', ],
-    'afiipxesymlink': '/var/lib/tftpboot/undionly.kpxe',
-    'afiipxesymlinktarget': '/usr/share/ipxe/undionly.kpxe',
+    'afiipxeromtgt': '/var/lib/tftpboot/undionly.kpxe',
+    'afiipxeromsrc': '/usr/share/ipxe/undionly.kpxe',
   },
 }, merge=salt['pillar.get']('afi:lookup')) %}
