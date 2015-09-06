@@ -13,9 +13,11 @@ afi__pkg_afi:
 afi__file_{{afi.aficonfdir}}:
   file.recurse:
     - name: {{afi.aficonfdir}}
+    - exclude_pat: E@hosts/.*/install/.*conf
     - clean: True
     - include_empty: True
     - force_symlinks: True
+    - keep_symlinks: True
     - user: apache
     - group: apache
     - dir_mode: 0775
